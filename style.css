@@ -131,6 +131,8 @@ ul li a:hover {
   border: 1.5px var(--text-color);
 }
 
+/* social links */
+
 #social-links {
   display: flex;
   gap: 24px;
@@ -163,7 +165,8 @@ footer {
   font-size: 14px;
 }
 
-/* animation */
+/* animation and slides */
+
 @keyframes slide-in {
   from {
     left: 0;
