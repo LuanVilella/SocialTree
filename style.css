@@ -58,12 +58,11 @@ body * {
   width: 64px;
   padding: 4px auto;
   margin: auto;
+  transition: all 0.5s ease-in-out;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
-  transition: all 0.5s ease-in-out;
+  animation: slide-in 0.4s forwards;
 }
 
 #switch button {
@@ -77,7 +76,12 @@ body * {
   top: 50%;
   z-index: 1;
   transform: translateY(-50%);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  animation: slide-back 0.2s;
+}
+
+#switch button:hover {
+  outline: 8px solid rgba(255, 255, 255, 0.2);
 }
 
 #switch span {
@@ -157,4 +161,23 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
